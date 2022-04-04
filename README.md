@@ -1,4 +1,16 @@
-# EmpCrud
+# Employee Crud Application
+
+
+## Sample Output
+
+![scan](https://github.com/srinivasaseenu/angular-crud/blob/main/output/emp_list.png?raw=true)
+![scan](https://github.com/srinivasaseenu/angular-crud/blob/main/output/emp_add_edit.png?raw=true)
+![scan](https://github.com/srinivasaseenu/angular-crud/blob/main/output/todo_list.png?raw=true)
+![scan](https://github.com/srinivasaseenu/angular-crud/blob/main/output/search_ascnding.png?raw=true)
+![scan](https://github.com/srinivasaseenu/angular-crud/blob/main/output/asc_order.png?raw=true)
+![scan](https://github.com/srinivasaseenu/angular-crud/blob/main/output/desc_order.png?raw=true)
+
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
 
