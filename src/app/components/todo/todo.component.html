@@ -1,0 +1,46 @@
+
+<hr><hr>
+
+
+<div class="p-3">
+    <div class="alert alert-success">Todo List</div>
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let todo of todoList1">{{todo}}</li>
+    </ul>
+</div>
+
+<hr>
+<div class="p-3">
+    <div class="alert alert-success">Todo List Search :  {{search2}} </div>
+    <input type="text" class="form-control" [(ngModel)]="search2" placeholder="search here">
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let todo of todoList2 | search:search2">{{todo}}</li>
+    </ul>
+</div>
+
+<hr>
+<div class="p-3">
+    <div class="alert alert-success">Todo List Search with ascnding order :  {{search3}} </div>
+    <input type="text" class="form-control" [(ngModel)]="search3" placeholder="search here">
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let todo of todoList3 | search:search3 | asc">{{todo}}</li>
+    </ul>
+</div>
+
+<hr>
+<div class="p-3">
+    <div class="alert alert-success">Todo List with ascnding order</div>
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let todo of todoList4 | asc">{{todo}}</li>
+    </ul>
+</div>
+
+<hr>
+<div class="p-3">
+    <div class="alert alert-success">Todo List with descnding order</div>
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let todo of todoList5 | desc">{{todo}}</li>
+    </ul>
+</div>
+
+<hr>

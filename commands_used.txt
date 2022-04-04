@@ -1,0 +1,18 @@
+ng new emp_crud
+
+npm i bootstrap --save
+
+ng g c components/nav
+ng g c components/employee
+ng g c components/addemployee
+ng g c components/editemployee
+ng g c components/todo
+
+ng g i interfaces/employee
+
+ng g s services/employee
+
+ng g p pipes/search
+ng g p pipes/asc
+ng g p pipes/desc
+
