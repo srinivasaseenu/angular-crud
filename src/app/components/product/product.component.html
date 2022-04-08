@@ -1,0 +1,30 @@
+<section>
+
+    <h2>
+        Product List
+        <a routerLink="/products/create" class="btn btn-success float-end">Add product</a>
+    </h2>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4" *ngFor="let product of productList">
+                <div class="card" class="m-2 border">
+                    <img [src]="product.image" class="card-img-top" alt="product image">
+                    <div class="card-body">
+                      <h5 class="card-title text-center">{{product.name}}</h5>
+                      <p class="card-text">
+                          <b>Price</b> : RS {{product.price}}
+                          <br><b>Quantity</b> : {{product.quantity}}
+                      </p>
+                      <a routerLink="/products/{{product.id}}/product-details" class="btn btn-sm btn-primary">view</a>
+                      <button type="button" class="btn btn-sm btn-success float-end" (click)="addtocart(product.id)">Add to cart</button>
+                    
+                    <hr>
+                    <a routerLink="/products/{{product.id}}/edit" class="btn btn-secondary btn-sm">Edit</a>
+                    <button type="button" (click)="deletepro(product.id)" class="btn btn-danger btn-sm float-end">Delete</button>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</section>

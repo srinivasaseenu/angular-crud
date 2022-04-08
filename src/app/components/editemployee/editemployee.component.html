@@ -1,23 +1,39 @@
 <div >
-    <form (ngSubmit)="updateEmployee()">
+    <form [formGroup]="formG" (ngSubmit)="updateEmployee()">
         <div class="form-group my-3">
             <label>Name</label>
-            <input type="text" [(ngModel)]="name" name="name" class="form-control" placeholder="Name">
+            <input type="text" formControlName="name" class="form-control" placeholder="Name">
+            <div *ngIf=" valid_form['name'].touched && valid_form['name'].invalid" class="alert alert-danger">
+                <div *ngIf="valid_form['name'].errors?.['required'] ">Name is required</div>
+                <div *ngIf="valid_form['name'].errors?.['pattern']">Only alphabets are allowed</div>
+            </div>
         </div>
         <div class="form-group my-3">
             <label>Email</label>
-            <input type="text" [(ngModel)]="email" name="email" class="form-control" placeholder="Email">
+            <input type="text" formControlName="email" class="form-control" placeholder="Email">
+            <div *ngIf="valid_form['email'].touched && valid_form['email'].invalid" class="alert alert-danger">
+                <div *ngIf="valid_form['email'].errors?.['required']">Email is required</div>
+                <div *ngIf="valid_form['email'].errors?.['email']">Entered email is invalid</div>
+                <div *ngIf="valid_form['email'].errors?.['pattern']">Entered email is invalid.</div>
+            </div>
         </div>
         <div class="form-group my-3">
             <label>Phone</label>
-            <input type="text" [(ngModel)]="phone" name="phone" class="form-control" placeholder="Phone">
+            <input type="text" formControlName="phone" class="form-control" placeholder="Phone">
+            <div *ngIf="valid_form['phone'].touched && valid_form['phone'].invalid" class="alert alert-danger">
+                <div *ngIf="valid_form['phone'].errors?.['required']">Phone is required </div>
+            </div>
+
         </div>
         <div class="form-group my-3">
             <label>Department</label>
-            <input type="text" [(ngModel)]="department" name="department" class="form-control" placeholder="Department">
+            <input type="text" formControlName="department" class="form-control" placeholder="Department">
+            <div *ngIf="valid_form['department'].touched && valid_form['department'].invalid" class="alert alert-danger">
+                <div *ngIf="valid_form['department'].errors?.['required']">Department is required</div>
+            </div>
         </div>
         <div class="form-group my-3 text-center">
-           <button type="submit" class="btn btn-success">Update</button>
+           <button type="submit" class="btn btn-success" [disabled]="formG.invalid">Update</button>
         </div>
     </form>
 </div>

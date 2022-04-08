@@ -24,7 +24,7 @@ export class EmployeeComponent implements OnInit {
 
   deleteEmp(id:number){
     if(confirm('Do you want to delete this employee?')){
-      this.empserv.deleteEmployee(id)
+      this.empserv.destroyEmployee(id)
       .subscribe(res=>{
         if(res.success){
           alert('employee deleted');

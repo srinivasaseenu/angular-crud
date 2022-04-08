@@ -9,10 +9,14 @@ import { AddemployeeComponent } from './components/addemployee/addemployee.compo
 import { EditemployeeComponent } from './components/editemployee/editemployee.component';
 import { TodoComponent } from './components/todo/todo.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SearchPipe } from './pipes/search.pipe';
 import { AscPipe } from './pipes/asc.pipe';
 import { DescPipe } from './pipes/desc.pipe';
+import { ProductComponent } from './components/product/product.component';
+import { ProductdetailsComponent } from './components/productdetails/productdetails.component';
+import { AddproductComponent } from './components/addproduct/addproduct.component';
+import { EditproductComponent } from './components/editproduct/editproduct.component';
 
 @NgModule({
   declarations: [
@@ -25,12 +29,17 @@ import { DescPipe } from './pipes/desc.pipe';
     SearchPipe,
     AscPipe,
     DescPipe,
+    ProductComponent,
+    ProductdetailsComponent,
+    AddproductComponent,
+    EditproductComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -8,9 +8,16 @@ ng g c components/addemployee
 ng g c components/editemployee
 ng g c components/todo
 
+ng g c components/product
+ng g c components/productdetails
+ng g c components/addproduct
+ng g c components/editproduct
+
 ng g i interfaces/employee
+ng g i interfaces/product
 
 ng g s services/employee
+ng g s services/product
 
 ng g p pipes/search
 ng g p pipes/asc

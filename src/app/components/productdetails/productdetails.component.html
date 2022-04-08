@@ -1,0 +1,21 @@
+<section>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <img src="{{product.image}}" alt="product image" height="400" class="w-100">
+            </div>
+            <div class="col-md-4 align-middle">
+                <div>
+                    <h2>Name : {{ product.name }}</h2>
+                    <p>Price : Rs {{ product.price }}</p>
+                    <p>Quantity : {{ product.quantity }}</p>
+                </div>
+                
+            </div>
+        </div>
+        <div class="p-1">
+            {{product.description}}
+        </div>
+    </div>
+</section>
